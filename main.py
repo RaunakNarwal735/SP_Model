@@ -6,6 +6,7 @@ def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Detect solar panels in an image.')
     parser.add_argument('--image_path', required=False, help='Path to the image file')
+    parser.add_argument('--weights', required=False, help='Path to trained weights (.h5) file. If not provided, will use latest in logs/.')
     args = parser.parse_args()
 
     if not args.image_path:
@@ -17,7 +18,7 @@ def main():
         os.makedirs("results")
 
     # Load the model
-    model = get_model()
+    model = get_model(weights_path=args.weights)
 
     # Detect solar panels
     result, image = detect_solar_panels(model, args.image_path)
