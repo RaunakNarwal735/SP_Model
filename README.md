@@ -6,7 +6,7 @@ This project uses a Mask R-CNN model to detect solar panels in satellite images.
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/RaunakNarwal735/SP_Model
    cd <repository-folder>
    ```
 
@@ -19,9 +19,8 @@ This project uses a Mask R-CNN model to detect solar panels in satellite images.
    ```bash
    pip install -r requirements.txt
    pip install git+https://github.com/akTwelve/Mask_RCNN.git
-   pip install pycocotools
    ```
-   > **Note:** Use `numpy<2` for best compatibility with Mask R-CNN and scientific libraries.
+   > **Note:** Use `numpy<2` for best compatibility with Mask R-CNN and scientific libraries, also use Python 3.10 or less
 
 4. **Download pre-trained weights (optional):**
    The model uses pre-trained weights from the COCO dataset. When you run the script for the first time, the weights will be downloaded to the `model/` directory if not present.
